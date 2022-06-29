@@ -1,0 +1,19 @@
+{
+  "name": "proyectocine",
+  "version": "1.0.0",
+  "description": "Proyecto cine, en el cual aplicaremos API REST ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juan98D/proyectoCine.git"
+  },
+  "author": "Juan Pablo Borrero",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Juan98D/proyectoCine/issues"
+  },
+  "homepage": "https://github.com/Juan98D/proyectoCine#readme"
+}
