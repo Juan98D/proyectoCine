@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Questrial', sans-serif;
 }
 
 html {
@@ -77,6 +78,50 @@ a {
 .destacados-title{
     text-align: center;
     margin-top: 35px;
+} 
+
+.movie-container--slider {
+    display: flex;
+    height: 416px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.movie-container--card {
+    position: relative;
+    scroll-snap-align: center;
+    width: 90%;
+    min-width: 190px;
+    max-width: 400px;
+    height: 350px;
+    margin: 50px 10px 0;
+    padding: 0 15px;
+    background-color: var(--just-white);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.cards-title {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.cards-parrafo {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.cards-title {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.img-card {
+    width: 150px;
+    height: 170px;
+    margin-left: 7px;
+    border-radius: 6px;
 }
 
 /*Animación de slider*/
