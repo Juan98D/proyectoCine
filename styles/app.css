@@ -128,37 +128,22 @@ a {
 .categorias-title {
     text-align: center;
     margin-top: 35px;
+    margin-bottom: 10px;
     font-size: 1.5rem;
 }
 
-.buscar {
-    position: absolute;
+.catagorias-container{
+    display: inline;
+    margin: 2px;
+}
+
+.container-name--categoria {
+    display: inline-block;
+    background: #C3C3C3;
     padding: 5px;
-}
-
-.buscar input {
-    width: 0px;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 1.8rem;
-    color: #000;
-    outline: 1px solid silver;
-    border-radius: 30px;
-    transition: all 0.6s ease;
-}
-
-.btn{
-    width: 55px;
-    height: 55px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #440080;
-    line-height: 55px;
-    text-align: center;
-    font-size: 1.8rem;
-    border-radius: 50%;
-    cursor: pointer;
+    border-radius: 8px;
+    margin: 1px;
+    border: none;
 }
 
 /*Animación de slider*/
@@ -177,9 +162,6 @@ a {
 }
 
 /*Animacion bonton buscar*/
-.buscar:hover input {
-    width: 240px;
-}
-.buscar input:focus {
-    width: 240px;
+.container-name--categoria:hover {
+    background: #9C9C9C;
 }

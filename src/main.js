@@ -1,4 +1,5 @@
 const BASE = 'https://api.themoviedb.org/3';
+const BASE_GENRE = '/genre/movie/list';
 const BASE_IMAGE = 'https://image.tmdb.org/t/p/w200';
 
 
@@ -71,4 +72,40 @@ async function getTrendingMoviesPreview () {
     });
 }
 
+async function getCategorias () {
+    const res = await fetch(BASE + BASE_GENRE +'?api_key=' + API_KEY);
+    const data = await res.json();
+
+    const generos = data.genres;
+
+    console.log(data)
+
+    generos.forEach(element => {
+
+
+        //creación de elementos
+        const categorias = document.getElementById('categorias');
+        const contenedor = document.createElement('div');
+        const article = document.createElement('button');
+        const textContenedor = document.createElement('p');
+
+        //Creacion de textos que agregaremos a los elementos
+        const texGenero = document.createTextNode(element.name);
+
+        //Asignacion de clases
+        contenedor.className = 'catagorias-container';
+        article.className= 'container-name--categoria';
+
+        //Agregamos el texto
+        textContenedor.appendChild(texGenero);
+
+        //Agregamos al HTML
+        categorias.appendChild(contenedor);
+        contenedor.appendChild(article);
+        article.appendChild(textContenedor);
+        
+    })
+}
+
+getCategorias();
 getTrendingMoviesPreview()
