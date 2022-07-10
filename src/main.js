@@ -72,6 +72,12 @@ async function getTrendingMoviesPreview () {
     });
 }
 
+function getValuesGenres (id) {
+    const x = document.getElementById(`${id}`);
+
+    console.log(x.value);
+}
+
 async function getCategorias () {
     const res = await fetch(BASE + BASE_GENRE +'?api_key=' + API_KEY);
     const data = await res.json();
@@ -82,27 +88,37 @@ async function getCategorias () {
 
     generos.forEach(element => {
 
-
+        let y = element.name;
         //creación de elementos
         const categorias = document.getElementById('categorias');
         const contenedor = document.createElement('div');
-        const article = document.createElement('button');
+        const boton = document.createElement('button');
         const textContenedor = document.createElement('p');
+        const link = document.createElement('a');
 
         //Creacion de textos que agregaremos a los elementos
         const texGenero = document.createTextNode(element.name);
 
         //Asignacion de clases
         contenedor.className = 'catagorias-container';
-        article.className= 'container-name--categoria';
+        boton.className= 'container-name--categoria';
 
+        //Agegamos propiedades a los elemento
+        link.href = '../pages/categorias.html'
+        link.target = '__blank'
+        boton.value = element.name;
+        boton.id = element.name
+        boton.setAttribute('onclick', `getValuesGenres('${y}')`);
+        
+        // boton.onclick = getValuesGenres();
         //Agregamos el texto
         textContenedor.appendChild(texGenero);
 
         //Agregamos al HTML
         categorias.appendChild(contenedor);
-        contenedor.appendChild(article);
-        article.appendChild(textContenedor);
+        contenedor.appendChild(boton);
+        boton.appendChild(link);
+        link.appendChild(textContenedor);
         
     })
 }

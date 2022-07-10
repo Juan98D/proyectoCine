@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Questrial', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Barra de navegación*/
+.navbar {
+    background: black;
+    width: 100%;
+    height: 30px;
+    padding: 7px;
+    text-align: right;
+}
+
+.navbar-item a{
+    color: white;
+}
+
+.navbar-item{
+    display: inline-block;
+    font-size: 1.4rem;
+    list-style: none;
+    margin-right: 6px;
+}
